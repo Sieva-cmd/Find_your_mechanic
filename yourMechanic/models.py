@@ -15,7 +15,8 @@ phone_number_validator = RegexValidator(
 class Customer(models.Model):
     username = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='customer_name')
     description = models.TextField(blank=True)
-    contact = models.CharField(max_length=15, blank=True, validators=[phone_number_validator])
+    phone_number = models.CharField(max_length=15, blank=True, validators=[phone_number_validator])
+    email = models.EmailField()
     location = models.CharField(max_length=100, null=True, blank=True)
     image = CloudinaryField('image', blank=True)
     
