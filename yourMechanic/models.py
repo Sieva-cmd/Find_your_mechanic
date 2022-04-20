@@ -39,7 +39,23 @@ class FullBodyPaint(models.Model):
     price = models.DecimalField(decimal_places=2, max_digits=20)
 
 class StereoSetup(models.Model):   
-    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='user') 
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='stereo') 
     part = models.TextField()
     description = models.TextField(null=True,blank=True)
+    price = models.DecimalField(decimal_places=2, max_digits=20)
+
+class EngineRepair(models.Model):   
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='enginerepair') 
+    part = models.TextField()
+    description = models.TextField(null=True,blank=True)
+    price = models.DecimalField(decimal_places=2, max_digits=20)
+
+class Customer(models.Model):
+    name = models.CharField(max_length=40)
+    description = models.TextField()
+    price = models.DecimalField(decimal_places=2, max_digits=20)
+
+class Mechanic(models.Model):
+    name = models.CharField(max_length=40)
+    description = models.TextField()
     price = models.DecimalField(decimal_places=2, max_digits=20)
