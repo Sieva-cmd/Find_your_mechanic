@@ -15,6 +15,8 @@ class FullBodyPaintList(APIView):
         paint = FullBodyPaint.objects.all()
         serializers = FullBodyPaintSerializer(paint, many=True)
         return Response(serializers.data)
+
+        
     def post(self, request, format=None):
         serializers = FullBodyPaintSerializer(data=request.data)
         if serializers.is_valid():

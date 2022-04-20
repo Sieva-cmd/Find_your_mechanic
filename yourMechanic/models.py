@@ -17,6 +17,8 @@ class Customer(models.Model):
     image = CloudinaryField('image', blank=True)
     def __str__(self):
         return str(self.username.username)
+
+
 class Mechanic(models.Model):
     name = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='customer_name')
     speciality = models.TextField(blank=True)
@@ -24,6 +26,8 @@ class Mechanic(models.Model):
     location = models.CharField(max_length=100, null=True, blank=True)
     def __str__(self):
         return str(self.name.name)
+
+
 class Engine(models.Model):
     part = models.CharField(max_length=100)
     description = models.TextField(null=True,blank=True)
@@ -31,6 +35,8 @@ class Engine(models.Model):
     payment = models.DecimalField(decimal_places=2, max_digits=40, default=2000)
     def __str__(self):
         return str(self.part)
+
+        
 
 class FullBodyPaint(models.Model):   
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='user') 
