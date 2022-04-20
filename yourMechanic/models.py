@@ -33,7 +33,13 @@ class Engine(models.Model):
 
 class FullBodyPaint(models.Model):   
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='user') 
-    part = models.CharField(max_length=100)
+    part = models.TextField()
     description = models.TextField(null=True,blank=True)
-    mechanic = models.OneToOneField(User,on_delete=models.CASCADE,related_name='mec')
+    mechanic = models.OneToOneField(User,on_delete=models.CASCADE)
+    price = models.DecimalField(decimal_places=2, max_digits=20)
+
+class StereoSetup(models.Model):   
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='user') 
+    part = models.TextField()
+    description = models.TextField(null=True,blank=True)
     price = models.DecimalField(decimal_places=2, max_digits=20)
