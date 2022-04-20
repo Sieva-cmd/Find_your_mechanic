@@ -27,5 +27,13 @@ class Engine(models.Model):
     part = models.CharField(max_length=100)
     description = models.TextField(null=True,blank=True)
     image = CloudinaryField('photo', blank=True)
+    payment = models.DecimalField(decimal_places=2, max_digits=40)
     def __str__(self):
         return str(self.part)
+
+class FullBodyPaint(models.Model):   
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='user') 
+    part = models.CharField(max_length=100)
+    description = models.TextField(null=True,blank=True)
+    mechanic = models.ForeignKey(User,on_delete=models.CASCADE,related_name='mec')
+    price = models.DecimalField(decimal_places=2, max_digits=20)
