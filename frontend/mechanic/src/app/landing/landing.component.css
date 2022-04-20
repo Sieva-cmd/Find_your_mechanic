@@ -31,11 +31,12 @@
         justify-content: space-evenly;
     }
     .work{
-        background-image: url(https://i.pinimg.com/736x/10/73/36/10733617ee6bfd14c4cce246a383424a.jpg);
+        /* background-image: url(https://www.ixpap.com/images/2021/03/car-background-ixpap.jpg); */
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 30rem;
+        height: 25rem;
+        width:60rem;
     }
     #title{
         color: white;
@@ -43,12 +44,7 @@
         text-align: center;
         /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     }
-    .list{
-        text-align: center;
-        color: white;
-        /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-        font-size: x-large;
-    }
+  
     .checked {
         color: orange;
       }
