@@ -1,3 +1,4 @@
+
 from django.db import models
 from django.core.validators import RegexValidator
 from cloudinary.models import CloudinaryField
@@ -59,3 +60,4 @@ class Mechanic(models.Model):
     name = models.CharField(max_length=40)
     description = models.TextField()
     price = models.DecimalField(decimal_places=2, max_digits=20)
+
