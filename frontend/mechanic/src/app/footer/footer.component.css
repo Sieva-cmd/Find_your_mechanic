@@ -89,8 +89,8 @@ blockquote:after {
 }
 .two blockquote:after{
   border: solid transparent; 
-  border-top-color: rgb(75, 71, 75);
-  border-left-color:rgb(75, 71, 75);
+  border-top-color: green;
+  border-left-color:green;
   border-width: 10px;
 }
 #third:checked ~ .three blockquote{
@@ -98,8 +98,8 @@ blockquote:after {
 }
 .three blockquote:after{
   border: solid transparent; 
-  border-top-color: rgb(75, 71, 75);
-  border-left-color: rgb(75, 71, 75);
+  border-top-color: blue;
+  border-left-color: blue;
   border-width: 10px;
 }
 .quotes{
@@ -131,10 +131,10 @@ img{
   border-color:black;
 }
 #second:checked ~ label.second {
-  border-width:6px; border-color:rgb(75, 71, 75);
+  border-width:6px; border-color:green;
 }
 #third:checked ~ label.third {
-  border:6px solid grey;
+  border:6px solid blue;
 }
 
 #first:checked ~ div.one {
@@ -149,3 +149,8 @@ img{
   left:0;
   opacity:1;
 }
+
+
+
+
+
