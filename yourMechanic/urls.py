@@ -3,6 +3,7 @@ from . import views
 from .views import RegisterList
 
 urlpatterns = [
+
     path('', views.index, name='index'),
     path('login/', views.login_view, name='login_view'),
     path('register/', views.register, name='register'),
@@ -13,6 +14,6 @@ urlpatterns = [
     path('customer/', views.customer, name='customer'),
     path('mechanic/', views.mechanic, name='mechanic'),
 
-    path('api/register/', RegisterList.as_view(), name='register'),
+    path('api/register/', RegisterList.as_view(), name='register_api'),
 
 ]

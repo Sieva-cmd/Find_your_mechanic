@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'knox',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,8 +52,28 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:4200',
+)
+# CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_ORIGIN_WHITELIST = (
+#     "http://localhost:4200/",
+# )
+
+
+# CORS_ALLOWED_ORIGINS = [
+#     "https://example.com",
+#     "https://sub.example.com",
+#     "http://localhost:8080",
+#     "http://localhost:4200/",
+# ]
 ROOT_URLCONF = 'mechanic.urls'
 
 TEMPLATES = [
@@ -88,8 +109,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mechanic',
-        'USER': 'moringa',
-        'PASSWORD':'Access',
+        'USER': 'user',
+        'PASSWORD':'Mzazi25',
     }
 }
 
