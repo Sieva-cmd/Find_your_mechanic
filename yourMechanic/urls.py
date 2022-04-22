@@ -1,7 +1,9 @@
-from django.urls import path, include
+from django.urls import path,include,re_path
 from . import views
+from .views import RegisterList
 
 urlpatterns = [
+
     path('', views.index, name='index'),
     path('login/', views.login_view, name='login_view'),
     path('register/', views.register, name='register'),
@@ -11,4 +13,15 @@ urlpatterns = [
     path('adminpage/', views.admin, name='adminpage'),
     path('customer/', views.customer, name='customer'),
     path('mechanic/', views.mechanic, name='mechanic'),
+
+    path('api/register/', RegisterList.as_view(), name='register_api'),
+    re_path(r'^api/fullbodypaint/$', views.FullBodyPaintList.as_view()),
+    re_path(r'^api/stereosetup/$', views.StereoSetupList.as_view()),
+    re_path(r'^api/enginerepair/$', views.EngineRepairList.as_view()),
+    re_path(r'^api/customer/$', views.CustomerList.as_view()),
+    re_path(r'^api/mechanic/$', views.MechanicList.as_view()),
 ]
+
+
+
+

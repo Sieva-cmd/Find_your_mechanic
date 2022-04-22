@@ -3,6 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 
 from yourMechanic.models import User
 
+
+
 class LoginForm(forms.Form):
     username = forms.CharField(
         widget= forms.TextInput(
@@ -40,8 +42,6 @@ class SignupForm(UserCreationForm):
             attrs={'class': 'form-control'}
         )
     )
-
-
     class Meta:
         model = User
         fields = ('username', 'email', 'password1', 'password2', 'is_admin', 'is_customer', 'is_mechanic')
