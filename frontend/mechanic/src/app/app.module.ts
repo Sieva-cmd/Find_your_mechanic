@@ -9,6 +9,9 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { FooterComponent } from './footer/footer.component';
 import { EndfooterComponent } from './endfooter/endfooter.component';
+import { RegisterComponent } from './register/register.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,16 @@ import { EndfooterComponent } from './endfooter/endfooter.component';
     AboutComponent,
     ServicesComponent,
     FooterComponent,
-    EndfooterComponent
+    EndfooterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    FormsModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
