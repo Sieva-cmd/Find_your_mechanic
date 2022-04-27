@@ -1,0 +1,18 @@
+form {
+    background-color: aliceblue;
+    display: flex;
+    margin: 7px 30px;
+    padding: 0 6px;
+    /* max-width: 500px; */
+    flex-direction: column;
+    border-radius: 20px;
+    font-family: 'Patrick Hand';
+    margin-left: 27px;
+    height: 483px;
+}
+.row{
+    background-image: url(../assets/images/profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 649px;
+}

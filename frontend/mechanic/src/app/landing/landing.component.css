@@ -1,0 +1,61 @@
+.container-fluid{
+    background-image: url(https://wallpaperaccess.com/full/249763.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+    }
+    .line1{
+        color: white;
+        font-size: xx-large;
+        margin-left: 10rem;
+        margin-top: 7rem;
+        font-family: 'Rubik Wet Paint', cursive;
+        font-family: 'Send Flowers', cursive;
+    }
+    .line2{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .stars{
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .line3{
+        color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .card{
+        display:flex;
+        justify-content: space-evenly;
+    }
+    .work{
+        /* background-image: url(https://www.ixpap.com/images/2021/03/car-background-ixpap.jpg); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 25rem;
+        width:60rem;
+    }
+    #title{
+        color: white;
+       
+        text-align: center;
+        /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    }
+  
+    .checked {
+        color: orange;
+      }
+      .para{
+        text-align: center;
+        color: black;
+        margin-left: 17rem;
+        font-size: xx-large;
+        line-height: 4rem;
+      }
+      .container1{
+        justify-content: space-between;
+        display: flex;
+      }
